@@ -8,9 +8,9 @@ class HttpResponse
     public readonly string $body;
     public readonly string $headers;
 
-    public function __construct(string $response)
+    public function __construct(public readonly string $response)
     {
-        [$h, $b] = explode("\r\n\r\n", $response);
+        [$h, $b] = explode("\r\n\r\n", $this->response);
         $this->headers = $h;
         $this->body = $b;
     }
@@ -18,5 +18,10 @@ class HttpResponse
     public function toJSON()
     {
         return json_decode($this->body);
+    }
+
+    public function __toString()
+    {
+        return $this->response;
     }
 }
