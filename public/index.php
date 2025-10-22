@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         color-scheme: light dark;
         --color-light-scheme: oklch(20.8% 0.042 265.755);
         --color-dark-scheme: #E9F1F7;
-        --color: light-dark(var(--app-color-light), var(--app-color-dark));
+        --color: light-dark(var(--color-light-scheme), var(--color-dark-scheme));
     }
     * {
         box-sizing: border-box;

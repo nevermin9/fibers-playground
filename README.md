@@ -21,4 +21,14 @@ The goal is educational: to illustrate how PHP’s Fiber API can bring readable,
 - The author wanted to practice with Fibers and understand how they work internally
 - Demonstrate building an async runtime from primitives.
 
+## Build as Docker image
+```bash
+docker build -t php-fiber-demo .
+```
+
+## Run as Docker container
+```bash
+docker run --rm -it -p 8000:8000 php-fiber-demo
+```
+
 
